@@ -1,0 +1,34 @@
+Descripción general
+Corazones es un juego de cartas cuyo objetivo es acabar la partida con el mínimo de puntos posibles. Es una evolución del original "Dama de Picas" francés. El juego estándar se realiza con una baraja francesa y cuatro jugadores. Se ha popularizado mucho a partir de su inclusión en el sistema operativo Windows.
+Inicio del juego
+Se reparten trece cartas a cada uno de los jugadores. En la 1ª ronda, cada jugador debe escoger 3 cartas y pasarlas al jugador de la izquierda. En la 2ª ronda, cada jugador debe escoger 3 cartas y pasarlas al jugador de la derecha. En la 3ª ronda, cada jugador debe escoger 3 cartas y pasarlas al jugador de enfrente. En la 4ª ronda no son pasadas cartas. En la 5º volverán a pasarse 3 cartas al jugador de la izquierda, en la 6º al de la derecha...y así sucesivamente. El jugador que en su mano tenga el dos de trébol (♣) comienza el juego el cual se desarrollará en sentido de las agujas del reloj.
+Las manos
+El que comienza la ronda tira una carta en medio de la mesa. Los otros tienen que seguir con el mismo palo. Gana la mano quien haya sacado la carta más alta, para efectos de este juego el As (A) de cada palo representa la carta más alta. El ganador de la mano es el que comienza la siguiente ronda.
+Si no se tienen cartas del palo escogido se puede tirar cualquier otra, teniendo en cuenta que las cartas negativas (las que valen puntos) no se pueden tirar en la primera mano. Algunas variantes normativas dicen que no se puede iniciar una mano tirando una carta del palo corazón hasta que alguien esté «sucio», o sea, que tenga ya cartas de corazones. Sin embargo, se puede lanzar una carta del palo corazón cuando se posee el turno para lanzar y ya no se poseen cartas de otros palos, o bien, cuando otro jugador lanzó alguna carta de cuyo palo no haya más cartas para lanzar; esto es válido desde la segunda mano en adelante.
+Las cuatro cartas de una mano se van apilando boca abajo en forma de pila. Solo se puede consultar la última mano para contar y planificar la estrategia. Las cartas negativas se ponen delante del jugador que se las ha llevado y a la vista.
+La partida la gana el jugador con menos puntos. El juego se acaba cuando algún jugador (el perdedor) llegue o supere los cien puntos.
+Cartas negativas
+Las cartas negativas son todas las del palo corazones (♥) y la Q de picas (♠), también llamada dama negra o reina negra. Cada carta negativa hace que el jugador sume puntos. Cada corazón suma 1 punto, y la Q de picas, suma 13 puntos.
+Si se suman todos los puntos posibles (quedándote con todos los corazones más la dama negra) se gana automáticamente la mano, sumando el resto de los participantes 26 puntos cada uno. Es lo que se llama bola, tocar el cielo, alcanzar la luna o pleno de dama.
+Proyecto
+La tarea consiste en implementar una versión de este juego en consola a través de comandos. Para ello debe utilizar la representación de una carta como un String de la manera: “Palo-Número” donde:
+•	Palo es una letra D (diamante), T (trébol), C (corazón) y P (Picas).
+•	Número es el valor de la carta 2 al 10, A, J, Q y K.
+•	Ejemplos: “T-10” (diez de trébol), “P-Q” (dama de picas), “C-A” (as de corazones) y “D-5” (cinco de diamantes).
+Usted debe controlar toda la lógica del juego evitando que algún jugador haga trampa.
+Interacción con el jugador
+La interacción con el usuario se hará mediante la consola. El jugador puede introducir distintos comandos para especificar la acción deseada. Estos comandos son los siguientes (los comandos son los que aparecen en cursiva): 
+1.	iniciar: Comienza una partida.
+2.	reiniciar: Termina la partida que se está desarrollando y comienza una nueva.
+3.	mostrar: Este comando muestra las cartas del jugador en turno separadas por una coma (,).
+4.	mostrar puntos: Muestra en consola los puntos que tiene cada jugador en todo el juego.
+5.	select “carta1” “carta2” “carta3”: Al inicio de cada ronda se debe indicar a cada jugador que debe mover tres cartas según como se indicaba en las reglas anteriores. Este es el comando que debe utilizar cada jugador para seleccionar las cartas. Usted es el encargado de ir por todos los jugadores pidiéndole que seleccione las cartas e indicándole hacia donde se moverán. Después comenzaría la ronda por el jugador que tiene el 2 de trébol.
+6.	jugar “carta”: este comando es para que el jugador en turno juegue una carta. El formato de la carta es similar al descrito anteriormente. Usted debe chequear que el movimiento sea válido. En caso de no serlo debe mostrar el mensaje: “Movimiento inválido”. Después que juegue el cuarto jugador debe mostrar un cartel con quien ganó. Es importante en todo momento se indique quien es el jugador que le toca jugar. Los jugadores son numerados del 1 al 4. Al finalizar una ronda se debe mostrar las cartas malas que tuvieron cada jugador, si un jugador no tuvo cartas malas entonces se deja en blanco. Se mostraría el número del jugador y las cartas malas que tuvo. Después se debe mostrar la puntación en todo el juego. Si uno de los jugadores llega a 100 puntos (la partida concluyó) se mostrará el jugador ganador y las puntuaciones finales por jugadores.
+7.	ayuda: Mostrará la lista de comandos que se pueden aplicar.
+8.	ayuda “nombre del comando”: Mostrará una descripción detallada de la funcionalidad del comando indicado.
+
+No se puede modificar ninguno de los comandos antes descritos. Una modificación en algún comando implica la obtención automática de 0 puntos en la tarea.
+
+Si un jugador introduce un comando incorrecto debe mostrársele un mensaje de error. Entre cada elemento que forma un comando debe existir un solo espacio. Los valores que aparecen entre comillas (“”) significa que en ese lugar aparecerá el elemento que se indica.
+La implementación de un jugador virtual es bonificada con 10 puntos siempre y cuando sea correcta la implementación y además juegue de manera aceptable.
+
